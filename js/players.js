@@ -1,10 +1,11 @@
 function getSelectPlayer(playerNameId) {
+    // debugger;
     const playerName = document.getElementById(playerNameId);
-    const playerNameString = playerName.innerText;
     const selectedPlayerField = document.getElementById('selected-players-list');
-    // selectedPlayerField.style.flexDirection = 'column';
-    // const previousSelectedPlayerField = selectedPlayerField.innerText;
-    selectedPlayerField.innerText = selectedPlayerField.innerText + playerNameString;
+    const playerNameString = playerName.innerText;
+    const li = document.createElement('li');
+    li.innerText = playerNameString;
+    selectedPlayerField.appendChild(li);
 }
 
 document.getElementById('select-benjema-btn').addEventListener('click', function(event) {
