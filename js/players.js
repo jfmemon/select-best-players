@@ -1,11 +1,15 @@
 function getSelectPlayer(playerNameId) {
-    // debugger;
-    const playerName = document.getElementById(playerNameId);
+    // debugger
     const selectedPlayerField = document.getElementById('selected-players-list');
+    const playerName = document.getElementById(playerNameId);
     const playerNameString = playerName.innerText;
     const li = document.createElement('li');
     li.innerText = playerNameString;
-    selectedPlayerField.appendChild(li);
+    if(selectedPlayerField.childElementCount < 5){
+        selectedPlayerField.appendChild(li);
+    }else{
+        alert("You are not able to select more than five players");
+    }
 }
 
 document.getElementById('select-benjema-btn').addEventListener('click', function(event) {
@@ -53,3 +57,9 @@ document.getElementById('select-rooney-btn').addEventListener('click', function(
     event.target.style.backgroundColor = 'gray';
     event.target.disabled = true;
 });
+
+
+
+
+// ---------budget-----------
+
