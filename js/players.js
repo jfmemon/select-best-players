@@ -1,5 +1,5 @@
 function getSelectPlayer(playerNameId) {
-    // debugger
+    // debugger;
     const selectedPlayerField = document.getElementById('selected-players-list');
     const playerName = document.getElementById(playerNameId);
     const playerNameString = playerName.innerText;
@@ -10,6 +10,7 @@ function getSelectPlayer(playerNameId) {
     }else{
         alert("You are not able to select more than five players");
     }
+    return selectedPlayerField.childElementCount;
 }
 
 document.getElementById('select-benjema-btn').addEventListener('click', function(event) {
@@ -57,9 +58,4 @@ document.getElementById('select-rooney-btn').addEventListener('click', function(
     event.target.style.backgroundColor = 'gray';
     event.target.disabled = true;
 });
-
-
-
-
-// ---------budget-----------
 
